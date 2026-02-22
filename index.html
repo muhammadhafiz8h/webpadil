@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+
+  <!-- This script pulls in Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- These are for the animations and photo gallery -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
+
+  <!-- Google Fonts for the Anime look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Link to your new external CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- IMPORTANT: Replace with a real image link after you upload it -->
+  <meta property="og:image" content="https://placehold.co/1200x630/87CEEB/FFFFFF?text=A+Surprise+For+[Name]">
+</head>
+
+<body>
+  <!-- Canvas for the falling cherry blossoms -->
+  <canvas id="sakura-canvas"></canvas>
+  <audio controls autoplay src="07...Green_Day_-_Last_Night_on_Earth_(mp3.pm).mp3" loop></audio>
+  <!-- Section 1: Hero Welcome -->
+  <header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+      <source src="lv_7558032510597205309_20260222212418.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+    <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
+      <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday Fiqah Inayah🤍!</h1>
+      <p class="mt-4 text-xl font-semibold">Celebrating a wonderful journey of you</p>
+      <div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto p-6 md:p-12">
+
+    <!-- Section 2: A Letter For You -->
+    <section class="my-16 md:my-24 max-w-3xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-anime text-sakura mb-8 drop-shadow-sm">A Special Message For You</h2>
+      <div class="text-left text-lg leading-relaxed space-y-4 bg-white p-8 rounded-lg shadow-lg">
+        <!-- TODO: Write your personal letter here -->
+        <p>Hi Nay,</p>
+        <p>Happy Birthday, my love 🤍</p>
+        <p>May God fulfill all your wishes, fill your days with endless happiness, and turn every dream of yours into
+          reality. I hope your life is always surrounded by the things you love, little moments of joy, and stories
+          beautiful enough to feel like a dream.</p>
+        <p>Thank you for being the kindest soul, the reason behind so many smiles, and the warmth that makes people feel
+          at home. You stay true to your roots, a genuine friend to everyone, and you never try to be anyone else,
+          because being yourself is already your magic.</p>
+        <p class="text-right mt-8">
+          Regards<br>
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: The Timeline -->
+    <section class="my-16 md:my-24">
+      <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">To My World</h2>
+      <div class="space-y-16">
+        <!-- Timeline Item 1 -->
+        <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+          <!-- TODO: Replace with your photo -->
+          <img src="IMG-20260222-WA0067.jpg" alt="Add photo 1"
+            class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+          <div class="text-center md:text-left">
+            <!-- TODO: Customize the date and story -->
+            <h3 class="text-2xl font-anime text-sakura">Part 1</h3>
+            <p class="mt-2 text-lg">"Ulang tahunmu, hari spesialku. Aku mau kamu tahu kalo kamu adalah alasan aku tersenyum setiap hari. Kamu yang buat hidupku jadi lebih berwarna, lebih indah, dan lebih berarti."</p>
+            <br>
+          </div>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+          <!-- TODO: Replace with your photo -->
+          <img src="IMG-20260222-WA0068.jpg" alt="Add photo 2"
+            class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+          <div class="text-center md:text-right">
+            <!-- TODO: Customize the date and story -->
+            <h3 class="text-2xl font-anime text-sakura">Part 2</h3>
+            <p class="mt-2 text-lg">Terima kasih atas kesabaranmu, cintamu, dan dukungannya. Aku sangat beruntung memiliki kamu di hidupku. Semoga tahun ini membawa kebahagiaan, kesuksesan, dan semua impianmu menjadi nyata. Aku selalu di sini untukmu, sekarang dan selama-lamanya.</p>
+            <br>
+          </div>
+        </div>
+        <!-- Timeline Item 3 (NEW) -->
+        <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+          <img src="IMG-20260222-WA0066.jpg" alt="Add photo 3"
+            class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-anime text-sakura">Part 3</h3>
+            <p class="mt-2 text-lg">Aku juga mau maaf atas semua hal yang mungkin udah bikin kamu ga nyaman, terutama karena aku yang selalu sibuk sendiri, yang bikin kamu jadi feeling lonely.  krna maen ML dan nonton dracin hhe. Terima kasih sudah jadi pasangan yang luar biasa. Aku selalu di sini untukmu. Aku cinta kamu."</p>
+            <br>
+          </div>
+        </div>
+        <!-- Timeline Item 4 (NEW) -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+          <img src="IMG-20260222-WA0086.jpg" alt="Add photo4" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+          <div class="text-center md:text-right">
+            <h3 class="text-2xl font-anime text-sakura">Part 4</h3>
+            <p class="mt-2 text-lg">Aku berharap hari ini dan tahun-tahun mendatang penuh dengan kebahagiaan, cinta, dan kesuksesan. Aku ingin kita selalu bersama, mendukung satu sama lain, dan mencintai satu sama lain lebih dalam setiap hari. Aku cinta kamu lebih dari kata-kata bisa ungkapkan."</p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Sanchita's Favorite Anime (NEW SECTION) -->
+    <section class="my-16 md:my-24">
+      <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Hall of Fame</h2>
+      <div class="relative">
+        <!-- Scroll Buttons -->
+        <button id="scroll-left-btn"
+          class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button id="scroll-right-btn"
+          class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Scrollable Container -->
+        <div id="hall-of-fame-scroller"
+          class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
+          <div class="flex snap-x snap-mandatory gap-8">
+            <!-- Anime Card 1 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="100">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="IMG-20260222-WA0070.jpg" alt="Photo 1"
+                  class="w-full aspect-[3/4] object-cover object-center rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Photo 1</h3>
+                <p class="mt-2">Cantikk</p>
+              </div>
+            </div>
+            <!-- Anime Card 2 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="IMG-20260222-WA0072.jpg" alt="Photo 2"
+                  class="w-full aspect-[3/4] object-cover object-center rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Photo 2</h3>
+                <p class="mt-2">Cantik juga</p>
+              </div>
+            </div>
+            <!-- Anime Card 3 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="300">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="IMG-20260222-WA0133.jpg" alt="Photo 3"
+                  class="w-full aspect-[3/4] object-cover object-center rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Photo 3</h3>
+                <p class="mt-2">Ini Cantik</p>
+              </div>
+            </div>
+            <!-- Anime Card 4 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="500">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="IMG-20260222-WA0088.jpg" alt="Photo 4"
+                  class="w-full aspect-[3/4] object-cover object-center rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Photo 4</h3>
+                <p class="mt-2">Yang ini Cantik</p>
+              </div>
+            </div>
+            <!-- Anime Card 5 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="500">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="IMG-20260222-WA0096.jpg" alt="Photo 5"
+                  class="w-full aspect-[3/4] object-cover object-center rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Photo 5</h3>
+                <p class="mt-2">Ini juga Cantik</p>
+              </div>
+            </div>
+            <!-- Anime Card 6 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="600">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="IMG-20260222-WA0106.jpg" alt="Photo 6"
+                  class="w-full aspect-[3/4] object-cover object-center rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Photo 6</h3>
+                <p class="mt-2">Cantik semua ternyata !!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-16 md:my-24">
+      <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Our Collection</h2>
+      <div class="relative">
+    <!-- Section 5: The Gallery -->
+    <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <a href="IMG-20260222-WA0084.jpg" data-aos="zoom-in" class="block w-full aspect-square">
+        <img src="IMG-20260222-WA0084.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 1">
+    </a>
+    <a href="IMG-20260222-WA0123.jpg" data-aos="zoom-in" data-aos-delay="100" class="block w-full aspect-square">
+        <img src="IMG-20260222-WA0123.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 2">
+    </a>
+    <a href="IMG-20260222-WA0119.jpg" data-aos="zoom-in" data-aos-delay="200" class="block w-full aspect-square">
+        <img src="IMG-20260222-WA0119.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 3">
+    </a>
+    <a href="IMG-20260222-WA0125.jpg" data-aos="zoom-in" data-aos-delay="300" class="block w-full aspect-square">
+        <img src="IMG-20260222-WA0125.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 4">
+    </a>
+    <a href="IMG-20260222-WA0117.jpg" data-aos="zoom-in" data-aos-delay="400" class="block w-full aspect-square">
+        <img src="IMG-20260222-WA0117.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 5">
+    </a>
+    <a href="IMG-20260222-WA0111.jpg" data-aos="zoom-in" data-aos-delay="500" class="block w-full aspect-square">
+        <img src="IMG-20260222-WA0111.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 6">
+    </a>
+    <a href="IMG-20260222-WA0100.jpg" data-aos="zoom-in" data-aos-delay="600" class="block w-full aspect-square">
+        <img src="IMG-20260222-WA0100.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 7">
+    </a>
+    <a href="IMG-20260222-WA0098.jpg" data-aos="zoom-in" data-aos-delay="700" class="block w-full aspect-square">
+        <img src="IMG-20260222-WA0098.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 8">
+    </a>
+    <a data-lg-size="1280-720" data-video='{"source": [{"src":"Video Project 1.mp4", "type":"video/mp4"}],"attributes": {"preload": "auto", "controls": true}}' class="block w-full aspect-square">
+      <div class="relative w-full h-full overflow-hidden rounded-lg border-4 border-white bg-black">
+        <video controls loop playsinline class="absolute inset-0 w-full h-full object-contain">
+          <source src="Video Project 1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </a>
+    <a data-lg-size="1280-720" data-video='{"source": [{"src":"Video Project 2.mp4", "type":"video/mp4"}],"attributes": {"preload": "auto", "controls": true}}' class="block w-full aspect-square">
+      <div class="relative w-full h-full overflow-hidden rounded-lg border-4 border-white bg-black">
+        <video controls loop playsinline class="absolute inset-0 w-full h-full object-contain">
+          <source src="Video Project 2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </a>
+
+    <a data-lg-size="1280-720" data-video='{"source": [{"src":"VID-20260222-WA0129.mp4", "type":"video/mp4"}],"attributes": {"preload": "auto", "controls": true}}' class="block w-full aspect-square">
+      <div class="relative w-full h-full overflow-hidden rounded-lg border-4 border-white bg-black">
+        <video controls loop playsinline class="absolute inset-0 w-full h-full object-contain">
+          <source src="VID-20260222-WA0129.mp4" type="video/mp4">
+        </video>
+      </div>
+    </a>
+
+    <a data-lg-size="1280-720" data-video='{"source": [{"src":"VID-20260222-WA0130.mp4", "type":"video/mp4"}]}' class="block w-full aspect-square">
+      <div class="relative w-full h-full overflow-hidden rounded-lg border-4 border-white bg-black">
+        <video controls loop playsinline class="absolute inset-0 w-full h-full object-contain">
+          <source src="VID-20260222-WA0130.mp4" type="video/mp4">
+        </video>
+      </div>
+    </a>
+</div>
+
+    <!-- Section 6: Video Finale -->
+    <section class="my-16 md:my-24" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-anime text-center mb-4">Lupyuuuu!!</h2>
+      <div class="max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden bg-navy">
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white p-8 text-center">
+    <p>Enjoy your day to the fullest.</p>
+    <p class="text-sm opacity-70 mt-2">Hope you liked it...</p>
+  </footer>
+
+  <!-- These scripts are for the animations and photo gallery -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+  <!-- Link to your new external JavaScript file -->
+  <script src="script.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/video/lg-video.min.js"></script>
+
+  <script>
+    // Pastikan inisialisasi ini yang paling baru
+    lightGallery(document.getElementById('lightgallery'), {
+      plugins: [lgVideo],
+      speed: 500,
+      videoMaxWidth: '100%',
+      autoplayVideoOnSlide: true, // INI KUNCINYA: Biar gak hitam pas digeser
+      gotoNextSlideOnVideoEnd: false,
+      download: false,
+      // Menambahkan preload agar video lebih cepat muncul
+      preload: 2 
+    });
+  </script>
+</body>
+
+</html>
