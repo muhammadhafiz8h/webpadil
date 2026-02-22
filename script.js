@@ -1,4 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('click', () => {
+    const audio = document.getElementById('bg-music');
+    if (audio && audio.paused) audio.play();
+  }, { once: true }); {
 
   // --- Live Age Counter ---
   const birthDate = new Date('2006-02-23T00:00:00');
@@ -150,4 +153,4 @@ document.addEventListener('DOMContentLoaded', function() {
       animate();
   }
   
-});
+};
